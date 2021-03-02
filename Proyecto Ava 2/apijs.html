@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="api.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Consumo API</title>
+</head>
+<body>
+    <h2 align="center">Nuevo Mensaje</h2>
+
+
+
+    <form class="formulario" id="formulario" method="POST" align="center" action="apisj.html">
+        <div class ="col-2 justify-content-center">
+        <button type ="button" class="button btn-primary form-control" onclick="nuevoPerfil()">Leer</button>
+        </div>
+
+        <br>
+        <br>
+        <tr>
+    <div class="contenedor" id="contenedor" align="center">
+        
+        <script type="text/javascript">
+    
+    function nuevoPerfil(){
+  
+    const url = 'https://api.chucknorris.io/jokes/random';
+
+    fetch(url)
+    .then(Response => Response.json())
+    .then(data => {
+        let elemento = document.getElementById('contenedor');
+        elemento.innerHTML = `
+                              "Created:" ${data.created_at}
+                               "ID:" ${data.id}
+                               "Imagen: " <img src ='${data.icon_url}'> 
+                              "Update" ${data.updated_at}
+                              "Url" <link ${data.url}">
+                               ${data.value}`;
+        console.log(data);
+
+        let arrayPersonas = new Array();
+        arrayPersonas.push(data.created_at);
+        arrayPersonas.push(data.id);
+         arrayPersonas.push(data.icon_url);
+
+
+        showPeople(arrayPersonas);
+    })
+    .catch(err => console.log(err))
+}
+
+
+</script>
+    
+    </div> 
+        </tr>
+    
+    <br>
+    <br>
+    <tr>
+      <div class="mostrarDatos" id="mostrarDatos"  align="center">
+        <h1 align="center">Mensajes Antiguos</h1>
+        <script type="text/javascript">
+            function showPeople(arrayPersonas){
+    let show = document.getElementById('mostrarDatos');
+
+    arrayPersonas.forEach(function (arrayPersonas) {
+       show.innerHTML += '<div> <ul>' + '<li>' + arrayPersonas + '</li> </ul> </div>';
+      
+    });
+}
+        </script>
+    </div>  
+    </tr>
+    
+    </form>
+</body>
+</html>

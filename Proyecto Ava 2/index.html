@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Principal</title>
+	<<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="Estilos.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+<script type="text/javascript">
+function pantalla{
+
+let n1=document.getElementById('nombre').value;	
+let n2=document.getElementById('ape').value;	
+let n3=document.getElementById('user').value;	
+let n4=document.getElementById('mensaje').value;
+alert(n1.value+" "+n2.value+" "+n3.value+" "+n4.value);
+}
+</script>
+
+
+
+</head>
+<body>
+
+<header id="header">
+
+	<nav class="menu">
+		 <h1> <a href="">Pagina De Ventas</a></h1>
+
+		 <div class="dropdown">
+
+		<div class="btn-group">
+    <a class="btn dropdown-toggle btn-info " data-toggle="dropdown" href="#">
+    API
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item " href="apijs.html">ENTRA A LA API</a></li>
+    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=A8MO7fkZc5o">Instalaciones</a></li>
+    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=eeqGuaAl6Ic">Soportes</a></li>
+</ul>
+  </div>
+<div class="btn-group" >
+<a class="btn dropdown-toggle btn-info " data-toggle="dropdown" href="#">
+    Productos
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=0UIB9Y4OFPs">Sistemas</a></li>
+    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=A8MO7fkZc5o">Licencias</a></li>
+   <li> <a class="dropdown-item" href="https://www.youtube.com/watch?v=eeqGuaAl6Ic">Componentes</a></li>
+</ul>
+  </div>
+<div class="btn-group">
+  <a class="btn dropdown-toggle btn-info " data-toggle="dropdown" href="#">
+    Contactanos
+    <span class="caret"></span>
+  </a>
+  	 <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=0UIB9Y4OFPs">E-Mail</a></li>
+    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=A8MO7fkZc5o">Facebook</a></li>
+    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=eeqGuaAl6Ic">WhatsApp</a></li>
+    </ul>
+  </div>
+  </div>
+	</nav>
+	
+</header>
+
+<div style="position:relative; padding-bottom:56.25%; padding-top:30px; height:0; overflow:hidden;">
+	<iframe  width="425" height="344" src="https://www.youtube.com/embed/v2AC41dglnM" frameborder="0" allowfullscreen 
+			style="position:absolute; top:180px;; left:330px; width:50%; height:50%;">
+	</iframe>
+</div>
+<div class="formulario-content">
+                                    <form id="formulario" method="POST" action="index.html">
+                                    	<div class ="col-5">
+                                        <label for="user">Nombre:</label>
+                                        <input type="text"  class="form-control" id="nombre" name="nombre" placeholder="Ingresa Tu Nombre">
+                                        </div>
+                                         <div class ="col-5">
+                                        <label for="ape">Apellidos:</label>
+                                        <input type="text" class="form-control" id="ape" name="ape" placeholder="Ingresa Su Apellido">
+                                        </div>
+                                        <div class ="col-5">
+                                        <label for="email">Correo Electronico:</label>
+                                        <input type="email" class="form-control" id="user" name="email" placeholder="Ingresa Tu Correo">
+                                        </div>
+                                        <div class ="col-10">
+                                        <label for="mensaje">Escribe Tu Mensaje:</label>
+                                        <textarea name="mensaje" class="form-control" id="mensaje"></textarea>
+                                        </div>
+                                        <div class ="col-3">
+                                        	<br>
+                                        <button id="btn" class="btn btn-primary form-control" onclick="return pantalla();" >Submit</button>
+                                        </div>
+                                        <br>
+                                        <div class="mensaje-form form-control">
+                                            <p>Escribenos Un Mensaje, Por Cualquier Duda o Consulta Que Tengas</p>
+                                        </div>
+                                        
+                                    </form>
+                            </div>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+
+.root{
+    --red: #ff0000;
+    --black: #000000;
+    --blue: #00ffff;
+    --white: #ffffff;
+}
+
+body
+{
+    background-image: url("https://www.wallpapertip.com/wmimgs/51-510951_fondos-para-paginas-web.jpg");
+    background-color: coral;
+
+}
+
+
+#header{
+    width: 100%;
+   
+}
+
+.menu
+{
+    top: 10px;
+    right: 20px;
+    left: 20px;
+    width: 90%;
+    height: 30%;
+    background: #AFACA6;
+    border-radius: 20px;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 99;
+}
+
+.menu h1 a{
+    text-decoration: none;
+    right: 40%;
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--white);
+}
+
+.formulario-content{
+    width: 60%;
+    background: white;
+    border-radius: 2px;
+    border: 2px solid red;
+    margin: 50px auto;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+.formulario-content #formulario textarea{
+    width: 90%;
+    height: 150px;
+    margin: auto;
+    border: 2px solid red;
+    border-radius: 24px;
+    outline: none;
+    font-size: 15px;
+    color: black;
+    padding: 20px;
+}
+
+.formulario-content #formulario .btnbutton{
+    width:150px;
+    height: 40px;
+    background: red;
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.formulario-content #formulario .btn button:hover{
+    background: blue;
+}
+
+.dropdown{
+    text-decoration: none;
+    margin: 10px 20px;
+    padding: 30px;
+    border-radius: 44px;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.4s;
+    
+}
+
+.container{
+   align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+h1{
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color:white;
+    font-weight: normal;
+    
+}
+
+/* Large desktop */
+@media (min-width: 1200px) { ... }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { ... }
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { ... }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { ... }
